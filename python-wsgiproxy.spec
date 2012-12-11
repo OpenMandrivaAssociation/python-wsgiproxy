@@ -34,3 +34,14 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{python_sitelib}/*
 
+
+
+%changelog
+* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 0.1-1mdv2011.0
++ Revision: 683274
+- import python-wsgiproxy
+
+
+* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.1
+- first release for Mandriva 
+
