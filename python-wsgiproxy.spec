@@ -1,13 +1,12 @@
 %define module wsgiproxy
 Name:           python-%module
-Version:        0.1
-Release:        %mkrel 1
+Version:        0.2.2
+Release:        1
 Summary:        HTTP proxying tools for WSGI apps
 Group:          Development/Python
 License:        MIT
 URL:            http://pythonpaste.org/wsgiproxy/
-Source0:        WSGIProxy-%version.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
+Source0:        http://pypi.python.org/packages/source/W/WSGIProxy/WSGIProxy-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-setuptools
 Requires:       python-paste
@@ -24,15 +23,12 @@ processes over HTTP.
 CFLAGS="%{optflags}" python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitelib}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
-%{python_sitelib}/*
+%{py_puresitedir}/*
 
 
 
@@ -44,4 +40,5 @@ rm -rf %{buildroot}
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.1
 - first release for Mandriva 
+
 
