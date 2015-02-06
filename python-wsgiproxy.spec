@@ -1,7 +1,7 @@
 %define module wsgiproxy
 Name:           python-%module
 Version:        0.2.2
-Release:        1
+Release:        2
 Summary:        HTTP proxying tools for WSGI apps
 Group:          Development/Python
 License:        MIT
