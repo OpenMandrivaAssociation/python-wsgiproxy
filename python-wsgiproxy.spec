@@ -5,7 +5,7 @@ Release:        2
 Summary:        HTTP proxying tools for WSGI apps
 Group:          Development/Python
 License:        MIT
-URL:            http://pythonpaste.org/wsgiproxy/
+URL:            https://pythonpaste.org/wsgiproxy/
 Source0:        http://pypi.python.org/packages/source/W/WSGIProxy/WSGIProxy-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-setuptools
